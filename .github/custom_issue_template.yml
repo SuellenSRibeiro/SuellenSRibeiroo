@@ -1,0 +1,70 @@
+name: Relatório de Problema / Melhoria
+description: Use este template para reportar problemas ou sugerir melhorias no projeto.
+title: "[BUG] Breve descrição do problema" # Ou "[MELHORIA] Breve descrição da sugestão"
+labels: ["bug", "melhoria"]
+assignees:
+  - seu-usuario-no-github
+
+body:
+  - type: markdown
+    attributes:
+      value: "### 📝 Descrição do problema ou melhoria\nDescreva detalhadamente o problema encontrado ou a melhoria proposta."
+
+  - type: textarea
+    id: passos_reproducao
+    attributes:
+      label: "🔄 Passos para Reproduzir (se aplicável)"
+      description: "Liste os passos para reproduzir o problema."
+      placeholder: |
+        1. Vá para '...'
+        2. Clique em '...'
+        3. Veja o erro '...'
+    validations:
+      required: false
+
+  - type: textarea
+    id: comportamento_esperado
+    attributes:
+      label: "✅ Comportamento Esperado"
+      description: "Descreva o comportamento correto ou esperado."
+      placeholder: "Exemplo: O programa deve retornar o índice do elemento encontrado no array."
+    validations:
+      required: true
+
+  - type: textarea
+    id: comportamento_atual
+    attributes:
+      label: "❌ Comportamento Atual"
+      description: "Descreva o comportamento incorreto ou o erro encontrado."
+      placeholder: "Exemplo: O programa retorna -1 mesmo quando o elemento está presente."
+    validations:
+      required: true
+
+  - type: textarea
+    id: solucao_proposta
+    attributes:
+      label: "💡 Solução Proposta"
+      description: "Sugira uma possível solução ou correção."
+      placeholder: "Exemplo: Alterar a condição do laço na busca binária para garantir a comparação correta."
+    validations:
+      required: false
+
+  - type: input
+    id: ambiente
+    attributes:
+      label: "🖥️ Ambiente"
+      description: "Detalhe o sistema operacional e versão do compilador utilizado."
+      placeholder: "Exemplo: Ubuntu 22.04, g++ 12.1.0"
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: tarefas
+    attributes:
+      label: "📌 Tarefas"
+      description: "Marque as etapas necessárias para a conclusão desta issue."
+      options:
+        - label: "Diagnosticar o problema"
+        - label: "Implementar a correção/melhoria"
+        - label: "Criar/atualizar testes"
+        - label: "Atualizar documentação (se necessário)"
